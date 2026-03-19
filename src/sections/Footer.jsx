@@ -10,12 +10,11 @@ const Footer = () => {
       </div>
       <div className="flex gap-3">
         {mySocials.map((social, index) => (
-          <a href={social.href} key={index}>
-            <img src={social.icon} className="w-5 h-5" alt={social.name} />
+          <a href={social.href} key={index} target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 transition-colors">
+            <img src={social.icon} className="w-5 h-5 object-contain" alt={social.name} />
           </a>
         ))}
       </div>
-      <p>© 2025 Ali. All rights reserved.</p>
     </section>
   );
 };
