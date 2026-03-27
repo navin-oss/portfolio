@@ -14,6 +14,7 @@ const About = () => {
         <div className="flex items-end grid-default-color grid-1">
           <img
             src="assets/coding-pov.png"
+            alt="Coding setup"
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
@@ -22,7 +23,7 @@ const About = () => {
               An AI/ML Engineer and Backend Developer passionate about building intelligent systems and scalable infrastructure, driven by chess-inspired strategic problem-solving.
             </p>
           </div>
-          <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
+          <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
         {/* Grid 2 */}
         <div className="grid-default-color grid-2">
@@ -104,7 +105,7 @@ const About = () => {
         {/* Grid 5 */}
         <div className="grid-default-color grid-5">
           <div className="z-10 w-[50%]">
-            <p className="headText">Tech Stack</p>
+            <p className="headtext">Tech Stack</p>
             <p className="subtext">
               I specialize in Python, Java, React, AI/ML tools (TensorFlow, PyTorch), and cloud infrastructure, building robust and intelligent applications.
             </p>

@@ -29,7 +29,7 @@ function Navigation() {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
+    <header className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
       <div className="mx-auto c-space max-w-7xl">
         <div className="flex items-center justify-between py-2 sm:py-0">
           <a
@@ -41,11 +41,13 @@ const Navbar = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isOpen}
           >
             <img
               src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
               className="w-6 h-6"
-              alt="toggle"
+              alt={isOpen ? "Close menu" : "Open menu"}
             />
           </button>
           <nav className="hidden sm:flex">
@@ -66,7 +68,7 @@ const Navbar = () => {
           </nav>
         </motion.div>
       )}
-    </div>
+    </header>
   );
 };
 

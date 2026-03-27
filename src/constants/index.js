@@ -11,12 +11,11 @@ export const myProjects = [
       "Built with Python, Scikit-learn, and REST APIs."
     ],
     href: "https://github.com/navin-oss/FinBehaviour",
-    logo: "",
     image: "/assets/projects/finbehaviour.png",
     tags: [
       { id: 1, name: "Python", path: "/assets/logos/python.svg" },
       { id: 2, name: "Scikit-learn", path: "/assets/logos/scikitlearn.svg" },
-      { id: 3, name: "NLP", path: "/assets/logos/jupyter.svg" },
+      { id: 3, name: "NLP", path: "/assets/logos/python.svg" },
       { id: 4, name: "BART", path: "/assets/logos/tensorflow.svg" },
     ],
   },
@@ -32,13 +31,12 @@ export const myProjects = [
       "Designed as a personal productivity assistant with a sleek interface."
     ],
     href: "https://github.com/navin-oss/JArvis-",
-    logo: "",
     image: "/assets/projects/jarvis.png",
     tags: [
       { id: 1, name: "Python", path: "/assets/logos/python.svg" },
-      { id: 2, name: "DeepSeek", path: "/assets/logos/tensorflow.svg" },
-      { id: 3, name: "Voice Recognition", path: "/assets/logos/github.svg" },
-      { id: 4, name: "Automation APIs", path: "/assets/logos/git.svg" },
+      { id: 2, name: "DeepSeek", path: "/assets/logos/python.svg" },
+      { id: 3, name: "Voice Recognition", path: "/assets/logos/python.svg" },
+      { id: 4, name: "Automation", path: "/assets/logos/python.svg" },
     ],
   },
   {
@@ -53,12 +51,11 @@ export const myProjects = [
       "Uses no database to prioritize performance and aesthetics."
     ],
     href: "https://github.com/navin-oss/cafe-website?tab=readme-ov-file",
-    logo: "",
     image: "/assets/projects/aesthetic-cafe.png",
     tags: [
       { id: 1, name: "TypeScript", path: "/assets/logos/typescript.svg" },
       { id: 2, name: "3D Effects", path: "/assets/logos/threejs.svg" },
-      { id: 3, name: "No DB", path: "/assets/logos/html5.svg" },
+      { id: 3, name: "HTML5", path: "/assets/logos/html5.svg" },
     ],
   },
   {
@@ -73,13 +70,12 @@ export const myProjects = [
       "Built using JavaScript, WeatherAPI, and Tailwind CSS."
     ],
     href: "https://github.com/navin-oss/weather-app",
-    logo: "",
     image: "/assets/projects/weather-app.png",
     tags: [
       { id: 1, name: "JavaScript", path: "/assets/logos/javascript.svg" },
       { id: 2, name: "Tailwind CSS", path: "/assets/logos/tailwindcss.svg" },
       { id: 3, name: "Redis", path: "/assets/logos/redis.svg" },
-      { id: 4, name: "WeatherAPI", path: "/assets/logos/git.svg" },
+      { id: 4, name: "WeatherAPI", path: "/assets/logos/javascript.svg" },
     ],
   },
   {
@@ -94,7 +90,6 @@ export const myProjects = [
       "Ensured reliable and accurate financial data handling."
     ],
     href: "https://github.com/navin-oss/gold-inventory-management",
-    logo: "",
     image: "/assets/projects/gold-shop.png",
     tags: [
       { id: 1, name: "Java", path: "/assets/logos/java.svg" },
@@ -114,13 +109,12 @@ export const myProjects = [
       "Developed with MongoDB, Express.js, React.js, and Node.js."
     ],
     href: "https://github.com/navin-oss/Internship-project",
-    logo: "",
     image: "/assets/projects/edtech-platform.png",
     tags: [
       { id: 1, name: "MongoDB", path: "/assets/logos/mongodb.svg" },
       { id: 2, name: "Express.js", path: "/assets/logos/javascript.svg" },
       { id: 3, name: "React", path: "/assets/logos/react.svg" },
-      { id: 1, name: "Node.js", path: "/assets/logos/nodejs.svg" },
+      { id: 4, name: "Node.js", path: "/assets/logos/nodejs.svg" },
     ],
   },
   {
@@ -135,7 +129,6 @@ export const myProjects = [
       "Built with vanilla HTML5, CSS3, and JavaScript for a lightweight, fast-loading experience."
     ],
     href: "https://github.com/navin-oss/temple-project",
-    logo: "",
     image: "/assets/projects/divine-temple.png",
     tags: [
       { id: 1, name: "HTML5", path: "/assets/logos/html5.svg" },
