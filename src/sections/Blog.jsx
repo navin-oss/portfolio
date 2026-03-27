@@ -69,7 +69,7 @@ const BlogCard = ({ post, index }) => (
 
 const Blog = () => {
   return (
-    <section className="c-space section-spacing" id="blog">
+    <section className="c-space mt-20 md:mt-30" id="blog">
       <ScrollReveal>
         <h2 className="text-heading">Thoughts & Insights</h2>
         <p className="mt-3 subtext">

@@ -57,7 +57,7 @@ const GitHubStats = () => {
   }, []);
 
   return (
-    <section className="c-space section-spacing" id="github">
+    <section className="c-space mt-20 md:mt-30" id="github">
       <ScrollReveal>
         <h2 className="text-heading">GitHub Activity</h2>
         <p className="mt-3 subtext">Open source contributions and coding activity</p>
