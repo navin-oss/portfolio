@@ -2,6 +2,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
+import ScrollReveal from "../components/ScrollReveal";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -60,6 +61,7 @@ const Contact = () => {
         refresh
       />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
+      <ScrollReveal className="w-full flex justify-center">
       <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Let's Talk</h2>
@@ -126,6 +128,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
+      </ScrollReveal>
     </section>
   );
 };

@@ -55,6 +55,14 @@ body {
   overflow-x: hidden;
 }
 
+@media (pointer: fine) {
+  body,
+  a,
+  button {
+    cursor: none !important;
+  }
+}
+
 .c-space {
   @apply sm:px-10 px-5 lg:px-15;
 }

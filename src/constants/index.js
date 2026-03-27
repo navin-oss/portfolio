@@ -11,6 +11,7 @@ export const myProjects = [
       "Built with Python, Scikit-learn, and REST APIs."
     ],
     href: "https://github.com/navin-oss/FinBehaviour",
+    liveDemo: "",
     image: "/assets/projects/finbehaviour.png",
     tags: [
       { id: 1, name: "Python", path: "/assets/logos/python.svg" },
@@ -31,6 +32,7 @@ export const myProjects = [
       "Designed as a personal productivity assistant with a sleek interface."
     ],
     href: "https://github.com/navin-oss/JArvis-",
+    liveDemo: "",
     image: "/assets/projects/jarvis.png",
     tags: [
       { id: 1, name: "Python", path: "/assets/logos/python.svg" },
@@ -51,6 +53,7 @@ export const myProjects = [
       "Uses no database to prioritize performance and aesthetics."
     ],
     href: "https://github.com/navin-oss/cafe-website?tab=readme-ov-file",
+    liveDemo: "",
     image: "/assets/projects/aesthetic-cafe.png",
     tags: [
       { id: 1, name: "TypeScript", path: "/assets/logos/typescript.svg" },
@@ -70,6 +73,7 @@ export const myProjects = [
       "Built using JavaScript, WeatherAPI, and Tailwind CSS."
     ],
     href: "https://github.com/navin-oss/weather-app",
+    liveDemo: "",
     image: "/assets/projects/weather-app.png",
     tags: [
       { id: 1, name: "JavaScript", path: "/assets/logos/javascript.svg" },
@@ -90,6 +94,7 @@ export const myProjects = [
       "Ensured reliable and accurate financial data handling."
     ],
     href: "https://github.com/navin-oss/gold-inventory-management",
+    liveDemo: "",
     image: "/assets/projects/gold-shop.png",
     tags: [
       { id: 1, name: "Java", path: "/assets/logos/java.svg" },
@@ -109,6 +114,7 @@ export const myProjects = [
       "Developed with MongoDB, Express.js, React.js, and Node.js."
     ],
     href: "https://github.com/navin-oss/Internship-project",
+    liveDemo: "",
     image: "/assets/projects/edtech-platform.png",
     tags: [
       { id: 1, name: "MongoDB", path: "/assets/logos/mongodb.svg" },
@@ -129,6 +135,7 @@ export const myProjects = [
       "Built with vanilla HTML5, CSS3, and JavaScript for a lightweight, fast-loading experience."
     ],
     href: "https://github.com/navin-oss/temple-project",
+    liveDemo: "https://divinedestination.netlify.app",
     image: "/assets/projects/divine-temple.png",
     tags: [
       { id: 1, name: "HTML5", path: "/assets/logos/html5.svg" },
