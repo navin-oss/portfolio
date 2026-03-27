@@ -24,7 +24,7 @@ const blogPosts = [
   {
     title: "Ranking 3rd in Aperture 3.0",
     excerpt:
-      "My open-source journey: 158 PRs merged across FinnovatePay, CropChain, and InnerHue. Lessons learned from contributing at scale.",
+      "My open-source journey: 158 PRs merged across SwapSmith, FinnovatePay, InnerHue, and CropChain — all live in production. Lessons learned from contributing at scale.",
     date: "Jan 2026",
     readTime: "6 min read",
     href: "https://github.com/navin-oss",

@@ -175,9 +175,10 @@ export const experiences = [
     date: "Past Experience",
     contents: [
       "Ranked 3rd over all India with a total of 158 PRs merged.",
-      "FinnovatePay: Contributed to improving project workflow and stability. Assisted in debugging and fixing backend issues.",
+      "SwapSmith: Contributed to a decentralized exchange platform. Live at swap-smith.vercel.app",
+      "FinnovatePay: Contributed to improving project workflow and stability. Live at finovate-pay.vercel.app",
       "CropChain: Contributed to a blockchain-based agriculture traceability platform. Helped improve repository structure and maintainability.",
-      "InnerHue: Contributed during the Aperture 3.0 Open Source Program. Worked on improvements related to mood analytics and visualization features.",
+      "InnerHue: Contributed to mood analytics and visualization features. Live at inner-hue.vercel.app",
     ],
   },
   {
