@@ -24,12 +24,17 @@ const blogPosts = [
   {
     title: "Ranking 3rd in Aperture 3.0",
     excerpt:
-      "My open-source journey: 158 PRs merged across SwapSmith, FinnovatePay, InnerHue, and CropChain — all live in production. Lessons learned from contributing at scale.",
+      "My open-source journey: 158 PRs merged across SwapSmith, FinnovatePay, InnerHue, and CropChain — all live in production.",
     date: "Jan 2026",
     readTime: "6 min read",
     href: "https://github.com/navin-oss",
     tag: "Open Source",
     tagColor: "from-fuchsia to-coral",
+    links: [
+      { label: "SwapSmith", url: "https://swap-smith.vercel.app/" },
+      { label: "FinnovatePay", url: "https://finovate-pay.vercel.app/contributors" },
+      { label: "InnerHue", url: "https://inner-hue.vercel.app/" },
+    ],
   },
 ];
 
@@ -57,6 +62,22 @@ const BlogCard = ({ post, index }) => (
       <p className="text-sm leading-relaxed text-neutral-400">
         {post.excerpt}
       </p>
+      {post.links && (
+        <div className="flex flex-wrap gap-2 mt-3">
+          {post.links.map((link, i) => (
+            <a
+              key={i}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="px-3 py-1 text-xs font-medium transition-colors border rounded-full text-aqua border-aqua/30 hover:bg-aqua/10"
+            >
+              {link.label} ↗
+            </a>
+          ))}
+        </div>
+      )}
       <div className="flex items-center gap-1 mt-4 text-sm font-medium transition-colors text-lavender group-hover:text-white">
         Read more
         <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
