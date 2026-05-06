@@ -1,15 +1,18 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
-import About from "./sections/About";
-import Projects from "./sections/Projects";
-import Experiences from "./sections/Experiences";
-import GitHubStats from "./sections/GitHubStats";
-import Blog from "./sections/Blog";
-import Testimonial from "./sections/Testimonial";
-import Contact from "./sections/Contact";
-import Footer from './sections/Footer';
 import CustomCursor from "./components/CustomCursor";
+import SectionLoader from "./components/SectionLoader";
+
+// Lazy load sections below the fold
+const About = lazy(() => import("./sections/About"));
+const Projects = lazy(() => import("./sections/Projects"));
+const Experiences = lazy(() => import("./sections/Experiences"));
+const GitHubStats = lazy(() => import("./sections/GitHubStats"));
+const Blog = lazy(() => import("./sections/Blog"));
+const Testimonial = lazy(() => import("./sections/Testimonial"));
+const Contact = lazy(() => import("./sections/Contact"));
+const Footer = lazy(() => import("./sections/Footer"));
 
 const App = () => {
   return (
@@ -18,17 +21,22 @@ const App = () => {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Projects />
-        <Experiences />
-        <GitHubStats />
-        <Blog />
-        <Testimonial />
-        <Contact />
+        <Suspense fallback={<SectionLoader />}>
+          <About />
+          <Projects />
+          <Experiences />
+          <GitHubStats />
+          <Blog />
+          <Testimonial />
+          <Contact />
+        </Suspense>
       </main>
-      <Footer/>
+      <Suspense fallback={<div className="h-20" />}>
+        <Footer />
+      </Suspense>
     </div>
   );
 };
 
 export default App;
+
