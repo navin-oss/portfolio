@@ -16,9 +16,9 @@ const Projects = () => {
 
   const handleMouseMove = (e) => {
     if (isMobile) return;
-    // Direct set is efficient with useMotionValue
-    x.set(e.clientX - 160); 
-    y.set(e.clientY - 112);
+    // Offset the preview so it doesn't cover the cursor/button
+    x.set(e.clientX + 20); 
+    y.set(e.clientY + 20);
   };
 
   const [preview, setPreview] = useState(null);

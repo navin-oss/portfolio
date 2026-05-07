@@ -37,6 +37,7 @@ const Project = ({
         </div>
         <button
           onClick={() => setIsHidden(true)}
+          onMouseEnter={() => !isMobile && setPreview(image)}
           className="flex items-center gap-1 cursor-pointer hover-animation"
         >
           View More
