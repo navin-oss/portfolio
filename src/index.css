@@ -64,7 +64,7 @@ body {
 }
 
 .gpu-accel {
-  transform: translateZ(0);
+  @apply transform-gpu;
   backface-visibility: hidden;
   perspective: 1000;
   will-change: transform;
