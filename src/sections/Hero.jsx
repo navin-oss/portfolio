@@ -5,7 +5,7 @@ import { Astronaut } from "../components/Astronaut";
 import { Float, Preload } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import { easing } from "maath";
-import { Suspense, useState, useEffect } from "react";
+import { Suspense } from "react";
 import Loader from "../components/Loader";
 
 const Hero = () => {
