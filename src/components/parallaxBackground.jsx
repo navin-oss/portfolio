@@ -17,7 +17,7 @@ const ParallaxBackground = () => {
           alt="sky"
           className="absolute inset-0 w-full h-full object-cover -z-50"
           style={{ objectPosition: "bottom" }}
-          fetchpriority="high"
+          fetchPriority="high"
         />
         {/* Mountain Layer 3 */}
         <motion.img
