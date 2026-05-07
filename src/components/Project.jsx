@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProjectDetails from "./ProjectDetails";
+import { useMediaQuery } from "react-responsive";
 
 const Project = ({
   title,
@@ -12,12 +13,14 @@ const Project = ({
   setPreview,
 }) => {
   const [isHidden, setIsHidden] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 640 });
+
   return (
     <>
       <div
         className="flex-wrap items-center justify-between py-10 space-y-14 sm:flex sm:space-y-0"
-        onMouseEnter={() => setPreview(image)}
-        onMouseLeave={() => setPreview(null)}
+        onMouseEnter={() => !isMobile && setPreview(image)}
+        onMouseLeave={() => !isMobile && setPreview(null)}
       >
         <div>
           <p className="text-2xl">{title}</p>
@@ -26,6 +29,11 @@ const Project = ({
               <span key={tag.id}>{tag.name}</span>
             ))}
           </div>
+          {isMobile && (
+            <div className="mt-6 overflow-hidden rounded-xl border border-white/10">
+              <img src={image} alt={title} className="w-full h-48 object-cover" />
+            </div>
+          )}
         </div>
         <button
           onClick={() => setIsHidden(true)}
