@@ -8,14 +8,14 @@ const Projects = () => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   
-  // Smoother spring settings
-  const springX = useSpring(x, { damping: 30, stiffness: 150 });
-  const springY = useSpring(y, { damping: 30, stiffness: 150 });
+  // Ultra-smooth spring settings
+  const springX = useSpring(x, { damping: 40, stiffness: 120, restDelta: 0.001 });
+  const springY = useSpring(y, { damping: 40, stiffness: 120, restDelta: 0.001 });
 
   const handleMouseMove = (e) => {
-    // Center the preview on the mouse
-    x.set(e.clientX - 160); // 160 is half of w-80 (320px)
-    y.set(e.clientY - 112); // 112 is half of h-56 (224px)
+    // Direct set is efficient with useMotionValue
+    x.set(e.clientX - 160); 
+    y.set(e.clientY - 112);
   };
 
   const [preview, setPreview] = useState(null);
@@ -49,16 +49,17 @@ const Projects = () => {
           {preview && (
             <motion.div
               key={preview}
-              initial={{ opacity: 0, scale: 0.8, y: 10 }}
+              initial={{ opacity: 0, scale: 0.9, y: 10 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.8, y: 10 }}
+              exit={{ opacity: 0, scale: 0.9, y: 10 }}
               transition={{ 
                 type: "spring",
-                damping: 20,
-                stiffness: 300,
-                opacity: { duration: 0.2 } 
+                damping: 25,
+                stiffness: 200,
+                opacity: { duration: 0.15 } 
               }}
-              className="overflow-hidden h-56 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] w-80 border border-white/20 backdrop-blur-md bg-white/5"
+              style={{ willChange: "transform, opacity" }}
+              className="overflow-hidden h-56 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] w-80 border border-white/20 backdrop-blur-xl bg-white/5"
             >
               <img
                 src={preview}

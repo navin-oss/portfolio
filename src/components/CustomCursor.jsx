@@ -48,7 +48,7 @@ const CustomCursor = () => {
       document.removeEventListener("mouseout", handleMouseOut);
       document.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, [cursorX, cursorY]);
+  }, [cursorX, cursorY, isVisible]);
 
   if (isTouchDevice) return null;
 
@@ -56,7 +56,7 @@ const CustomCursor = () => {
     <>
       {/* Dot */}
       <motion.div
-        className="fixed top-0 left-0 z-[9999] pointer-events-none mix-blend-difference"
+        className="fixed top-0 left-0 z-[9999] pointer-events-none"
         style={{
           x: cursorX,
           y: cursorY,
@@ -66,23 +66,30 @@ const CustomCursor = () => {
           height: 8,
           borderRadius: "50%",
           backgroundColor: "#fff",
+          boxShadow: "0 0 10px rgba(255, 255, 255, 0.5)",
           opacity: isVisible ? 1 : 0,
+          willChange: "transform",
         }}
       />
       {/* Ring */}
       <motion.div
-        className="fixed top-0 left-0 z-[9998] pointer-events-none mix-blend-difference"
+        className="fixed top-0 left-0 z-[9998] pointer-events-none"
+        animate={{
+          width: isHovering ? 60 : 40,
+          height: isHovering ? 60 : 40,
+          borderWidth: isHovering ? "1px" : "2px",
+          borderColor: isHovering ? "rgba(255, 255, 255, 0.8)" : "rgba(255, 255, 255, 0.4)",
+        }}
+        transition={{ type: "spring", damping: 30, stiffness: 200 }}
         style={{
           x: springX,
           y: springY,
           translateX: "-50%",
           translateY: "-50%",
-          width: isHovering ? 60 : 40,
-          height: isHovering ? 60 : 40,
           borderRadius: "50%",
-          border: "2px solid rgba(255, 255, 255, 0.5)",
+          borderStyle: "solid",
           opacity: isVisible ? 1 : 0,
-          transition: "width 0.3s, height 0.3s",
+          willChange: "transform, width, height",
         }}
       />
     </>

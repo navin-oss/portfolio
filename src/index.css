@@ -63,6 +63,13 @@ body {
   }
 }
 
+.gpu-accel {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  will-change: transform;
+}
+
 .c-space {
   @apply sm:px-10 px-5 lg:px-15;
 }
