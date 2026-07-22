@@ -3,6 +3,8 @@ import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
 import ScrollReveal from "../components/ScrollReveal";
+
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -47,7 +49,9 @@ const Contact = () => {
       showAlertMessage("success", "Your message has been sent!");
     } catch (error) {
       setIsLoading(false);
-      console.log(error);
+      console.error("EmailJS Error:", error);
+      console.error("Error status:", error?.status);
+      console.error("Error text:", error?.text);
       showAlertMessage("danger", "Something went wrong!");
     }
   };
